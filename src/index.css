@@ -1,0 +1,115 @@
+:root {
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/150% var(--sans);
+  letter-spacing: 0.18px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+[data-theme='dark'] {
+  --text: #c4b5d4;
+  --text-h: #f0e6f6;
+  --bg: #0d0d12;
+  --surface: #1a1a24;
+  --surface-hover: #22222e;
+  --border: #2a2a3a;
+  --accent: #9b59b6;
+  --accent-bg: rgba(155, 89, 182, 0.12);
+  --accent-border: rgba(155, 89, 182, 0.4);
+  --nav-bg: rgba(13, 13, 18, 0.85);
+  --nav-border: rgba(42, 42, 58, 0.5);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --input-bg: #1a1a24;
+  --input-border: #2a2a3a;
+}
+
+[data-theme='light'] {
+  --text: #5a4a6e;
+  --text-h: #2d1b3e;
+  --bg: #faf5ff;
+  --surface: #ffffff;
+  --surface-hover: #f5f0fa;
+  --border: #e4dcee;
+  --accent: #9b59b6;
+  --accent-bg: rgba(155, 89, 182, 0.08);
+  --accent-border: rgba(155, 89, 182, 0.3);
+  --nav-bg: rgba(250, 245, 255, 0.85);
+  --nav-border: rgba(228, 220, 238, 0.5);
+  --card-shadow: 0 4px 20px rgba(155, 89, 182, 0.08);
+  --input-bg: #ffffff;
+  --input-border: #e4dcee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.3s, color 0.3s;
+}
+
+#root {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--sans);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--nav-border);
+  color: var(--text);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent-border);
+    background: var(--accent-bg);
+  }
+}
