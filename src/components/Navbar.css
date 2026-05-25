@@ -104,6 +104,7 @@
 
   .hamburger {
     display: flex;
+    margin-left: auto;
   }
 
   .nav-links {
