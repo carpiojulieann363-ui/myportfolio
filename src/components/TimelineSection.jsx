@@ -1,27 +1,28 @@
 const EVENTS = [
   {
-    year: '2024',
-    title: 'Senior Developer',
-    subtitle: 'Tech Corp',
-    desc: 'Led frontend architecture for major product rewrite.',
+    year: '2022 - Present',
+    title: 'BS IN INFORMATION TECHNOLOGY',
+    subtitle: 'Saint Francis Institute of Computer Studies',
   },
   {
-    year: '2022',
-    title: 'Full-Stack Developer',
-    subtitle: 'Startup Inc',
-    desc: 'Built and shipped the core product from the ground up.',
+    year: '2020 - 2022',
+    title: 'STEM (SENIOR HIGH SCHOOL)',
+    subtitle: 'IETI College of Science and Technology, Inc.',
   },
   {
-    year: '2020',
-    title: 'Junior Developer',
-    subtitle: 'Web Agency',
-    desc: 'Developed client websites and internal tools.',
+    year: '2016 - 2020',
+    title: 'JUNIOR HIGH SCHOOL',
+    subtitle: 'Sampaguita National High School',
   },
   {
-    year: '2019',
-    title: 'Computer Science Degree',
-    subtitle: 'University',
-    desc: 'Graduated with honors in Computer Science.',
+    year: '2010 - 2016',
+    title: 'ELEMENTARY',
+    subtitle: 'Cabatuan Elementary School',
+  },
+  {
+    year: '2009 - 2010',
+    title: 'KINDERGARTEN',
+    subtitle: 'Cabatuan Elementary School',
   },
 ]
 
@@ -31,14 +32,14 @@ function TimelineSection() {
       <h2 className="section-title">Timeline</h2>
       <div className="section-divider" />
       <div className="timeline">
-        {EVENTS.map(({ year, title, subtitle, desc }) => (
-          <div key={year + title} className="timeline-item">
+        {EVENTS.map(({ year, title, subtitle, desc }, i) => (
+          <div key={year + title} className={`timeline-item ${i % 2 === 0 ? 'left' : 'right'}`}>
             <div className="timeline-dot" />
             <div className="timeline-content">
               <span className="timeline-year">{year}</span>
               <h3 className="timeline-title">{title}</h3>
               <span className="timeline-subtitle">{subtitle}</span>
-              <p className="timeline-desc">{desc}</p>
+              {desc && <p className="timeline-desc">{desc}</p>}
             </div>
           </div>
         ))}

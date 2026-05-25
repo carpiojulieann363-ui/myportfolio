@@ -3,14 +3,11 @@ function HomeSection() {
     <section id="home" className="section home-section">
       <div className="home-grid">
         <div className="home-text">
-          <h1 className="home-name">Julie Ann Carpio</h1>
-          <p className="home-tagline">
-            Full-stack developer crafting elegant digital experiences
-          </p>
-          <p className="home-desc">
-            I build modern web applications with a focus on design, performance,
-            and user experience.
-          </p>
+          <h1 className="home-name">
+            <span className="home-greeting">Hi There,</span>
+            I'm Julie Ann B. Carpio<br />
+            <span className="home-role">I am a Frontend Developer |</span>
+          </h1>
           <div className="home-actions">
             <button
               className="btn-primary"

@@ -53,7 +53,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-inner">
-        <span className="nav-logo">JAC</span>
+        <span className="nav-logo">JAC.</span>
         <button
           className={`hamburger ${menuOpen ? 'open' : ''}`}
           onClick={(e) => { e.stopPropagation(); setMenuOpen((m) => !m) }}

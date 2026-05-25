@@ -1,0 +1,22 @@
+.loading-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  transition: opacity 0.5s ease;
+}
+
+.loading-intro.fade-out {
+  opacity: 0;
+}
+
+.loading-intro-logo {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 72px;
+  color: var(--accent);
+  letter-spacing: -2px;
+}
