@@ -11,13 +11,19 @@ const PROJECTS = [
     tags: ['HTML', 'JavaScript', 'CSS'],
     video: '/Demo_VSA.mp4',
   },
+  {
+    title: 'My Portfolio',
+    desc: 'A modern personal portfolio website built with React and Python, featuring dynamic project filtering and a responsive layout.',
+    tags: ['React', 'Python'],
+    video: '/Demo_myportfolio.mp4',
+  },
 ]
 
 function WorksSection() {
   return (
     <section id="works" className="section works-section">
       <h2 className="section-title">Project</h2>
-      <div className="section-divider" />
+      <br />
       <p className="works-intro">Projects built with creativity, passion, and modern web solutions.</p>
       <div className="works-grid">
         {PROJECTS.map(({ title, desc, tags, video }) => (

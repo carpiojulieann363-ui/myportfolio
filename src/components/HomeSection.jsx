@@ -9,8 +9,11 @@ function HomeSection() {
             <span className="home-role">I am a Frontend Developer |</span>
           </h1>
           <div className="home-actions">
+            <a href="/CV_JulieAnnCarpio.pdf" download className="btn-primary">
+              Download CV
+            </a>
             <button
-              className="btn-primary"
+              className="btn-secondary"
               onClick={() =>
                 document
                   .getElementById('works')
@@ -18,16 +21,6 @@ function HomeSection() {
               }
             >
               View my work
-            </button>
-            <button
-              className="btn-secondary"
-              onClick={() =>
-                document
-                  .getElementById('contact')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
-            >
-              Get in touch
             </button>
           </div>
         </div>

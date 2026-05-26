@@ -48,7 +48,7 @@ function SkillsSection() {
   return (
     <section id="skills" className="section skills-section">
       <h2 className="section-title">Skills</h2>
-      <div className="section-divider" />
+      <br />
       <p className="skills-intro">Technologies and tools I specialize in.</p>
       <div className="skills-categories">
         {SKILL_CATEGORIES.map(({ title, icon, skills }) => (

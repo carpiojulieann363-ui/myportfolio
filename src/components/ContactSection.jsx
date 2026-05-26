@@ -4,20 +4,27 @@ function ContactSection() {
   return (
     <section id="contact" className="section contact-section">
       <h2 className="section-title">Contact</h2>
-      <div className="section-divider" />
+      <br />
       <p className="contact-intro">
         Have a project in mind? Let us work together.
       </p>
       <div className="contact-columns">
-        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-          <input type="text" placeholder="Your Name" className="form-input" />
-          <input type="email" placeholder="Your Email" className="form-input" />
-          <input type="text" placeholder="Subject" className="form-input" />
+        <form
+          className="contact-form"
+          action="https://formsubmit.co/carpiojulieann363@gmail.com"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Your Name" className="form-input" required />
+          <input type="email" name="email" placeholder="Your Email" className="form-input" required />
+          <input type="text" name="_subject" placeholder="Subject" className="form-input" />
           <textarea
+            name="message"
             placeholder="Your Message"
             className="form-textarea"
             rows={5}
+            required
           />
+          <input type="hidden" name="_template" value="table" />
           <button type="submit" className="btn-primary">
             Send Message
           </button>

@@ -30,7 +30,7 @@ function TimelineSection() {
   return (
     <section id="timeline" className="section timeline-section">
       <h2 className="section-title">Timeline</h2>
-      <div className="section-divider" />
+      <br />
       <div className="timeline">
         {EVENTS.map(({ year, title, subtitle, desc }, i) => (
           <div key={year + title} className={`timeline-item ${i % 2 === 0 ? 'left' : 'right'}`}>
